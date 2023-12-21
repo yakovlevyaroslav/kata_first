@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Kata Form</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="external">
+      <div class="logo-block">
+        <div class="logo-block-icon"></div>
+      </div>
+      <div class="form-block">
+        <h1 class="form-block__title">
+          Get iintoo it today
+        </h1>
+        <div class="form-block__subtitle">
+          There is no charge or obligation upon registration.
+        </div>
+        <div class="form-block__socials">
+          <a href="fb.com" class="form-block__socials__btn form-block__socials__btn--fb">
+            Register with Facebook
+          </a>
+          <a href="in.com" class="form-block__socials__btn form-block__socials__btn--in">
+            Register with LinkedIn
+          </a>
+        </div>
+        <div class="form-block__separator">
+          <div class="form-block__separator__line"></div>
+          <div class="form-block__separator__or">OR</div>
+          <div class="form-block__separator__line"></div>
+        </div>
+        <form action="" class="form-block__form">
+          <div class="form-block__form__input--wrapper">
+            <div class="form-block__form__input">
+              <input class="form-block__form__input-field" 
+                      id="input_email" 
+                      name="email" 
+                      type="email" 
+                      placeholder="email@inbox.com"
+                      required>
+              <label class="form-block__form__input-label" for="input_email">Email</label>
+            </div>
+            <div class="form-block__form__input">
+              <input class="form-block__form__input-field" 
+                      id="input_phone" 
+                      name="phone" 
+                      type="tel" 
+                      placeholder="88005553535"
+                      maxlength="11"
+                      required>
+              <label class="form-block__form__input-label" for="input_phone">Phone</label>
+            </div>
+          </div>
+  
+          <div class="form-block__form__type">
+            <h2 class="form-block__form__type__title">
+              What type of investor are you?
+            </h2>
+            <div class="form-block__form__type__subtitle">
+              Select the type of investor you are below.
+            </div>
+            <fieldset class="form-block__form__fieldset">
+              <div class="form-block__form__radio">
+                <input class="form-block__form__radio-btn" type="radio" id="ind" name="type" value="ind" checked />
+                <label class="form-block__form__radio-label" for="ind">Individual</label>
+                <div class="form-block__form__radio-info">i</div>
+              </div>
+              <div class="form-block__form__radio">
+                <input class="form-block__form__radio-btn" type="radio" id="bus" name="type" value="bus" />
+                <label class="form-block__form__radio-label" for="bus">Business</label>
+                <div class="form-block__form__radio-info">i</div>
+              </div>
+              <div class="form-block__form__radio">
+                <input class="form-block__form__radio-btn" type="radio" id="ira" name="type" value="ira" />
+                <label class="form-block__form__radio-label" for="ira">IRA</label>
+                <div class="form-block__form__radio-info">i</div>
+              </div>
+              <div class="form-block__form__radio">
+                <input class="form-block__form__radio-btn" type="radio" id="tru" name="type" value="tru" />
+                <label class="form-block__form__radio-label" for="tru">Trust</label>
+                <div class="form-block__form__radio-info">i</div>
+              </div>
+  
+            </fieldset>
+            <div class="form-block__form__info">
+              I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+            </div>
+            <div class="form-block__form__checkbox">
+              <input class="form-block__form__checkbox-btn" type="checkbox" id="checkbox" required/>
+              <label class="form-block__form__checkbox-label" for="checkbox">
+                I agree to the terms and receiving notifications form iintoo <a class="form-block__form__checkbox-label__link" href="/docs/tems.pdf" target="_blank">View full terms</a> 
+              </label>
+            </div>
+  
+            <input type="submit" value="Create Account" class="form-block__form__submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+$bg: #EFF6FF;
+$text: #2A4A5C;
+$fb: #255A9B;
+$in: #0076B6;
+$light-blue: #3698FB;
+$blue-gray: #7B8A92;
+$light-blue-gray: #96A5B1;
+$red-gray: #AFAFAF;
+$gray: #EEEEEE;
+$red: #AFAFAF;
+
+@import url('/assets/fonts/brlw_bold/stylesheet.css');
+@import url('/assets/fonts/brlw_medium/stylesheet.css');
+@import url('/assets/fonts/brlw_regular/stylesheet.css');
+@import url('/assets/fonts/brlw_light/stylesheet.css');
+
+@mixin bg-standart {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-contain {
+  @include bg-standart();
+  background-size: contain;
+}
+
+@mixin bg-cover {
+  @include bg-standart();
+  background-size: cover;
+}
+
+* {
+  transition: all ease-in .2s;
+}
+
+body {
+  background-color: $bg;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'barlowregular';
+  color: $text;
+}
+
+.container {
+  padding: 20px 10px;
+}
+
+.external {
+  max-width: 1440px;
+  max-height: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.05);
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.logo-block {
+  @include bg-cover();
+  background-image: url('/assets/images/bg.jpg');
+
+  width: 50%;
+  height: 1000px;
+  position: relative;
+
+  @media screen and (max-width: 480px) {
+    height: 110px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &-icon {
+    @include bg-contain();
+    background-image: url('/assets/icons/logo.svg');
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    left: 50px;
+    top: 50px;
+
+    @media screen and (max-width: 480px) {
+      left: 20px;
+      top: 10px;
+    }
+  }
+}
+
+.form-block {
+  padding: 100px 20px 100px 65px;
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+
+  &__subtitle {
+    opacity: 0.7;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      color: white;
+      text-decoration: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      width: 250px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 480px) {
+        width: 48%;
+        font-size: 12px;
+        background-position: 5px center;
+        margin-bottom: 5px;
+      }
+
+      &:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      &--fb {
+        background-size: 20px;
+        background-image: url('/assets/icons/facebook.svg');
+        background-color: $fb;
+        margin-right: 20px;
+
+        @media screen and (max-width: 480px) {
+          margin-right: 10px;
+          background-size: 12px;
+        }
+      }
+
+      &--in {
+        background-size: 20px;
+        background-image: url('/assets/icons/linkedin.svg');
+        background-color: $in;
+
+        @media screen and (max-width: 480px) {
+          background-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 20px;
+    }
+
+    &__line {
+      height: 1px;
+      width: 100px;
+      background-color: black;
+      opacity: .2;
+    }
+
+    &__or {
+      font-size: 12px;
+      margin: 0 10px;
+      opacity: .7;
+    }
+  }
+
+  &__form {
+
+
+    &__input--wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__input {
+      position: relative;
+      display: flex;
+      width: 250px;
+      margin-bottom: 50px;
+
+      @media screen and (max-width: 480px) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(1) {
+        margin-right: 30px;
+
+        @media screen and (max-width: 480px) {
+          margin-right: 10px;
+        }
+      }
+
+      &-field {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        width: 100%;
+        padding: 20px 5px 5px 7px;
+
+        &:focus {
+          border-left: 2px solid $light-blue;
+          outline: none;
+        }
+      }
+
+      &-label {
+        position: absolute;
+        top: 5px;
+        left: 7px;
+        opacity: .8;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    &__type {
+      &__subtitle {
+        opacity: .7;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 480px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &__fieldset {
+      border: none;
+      padding: 0;
+      display: flex;
+
+      @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__radio {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      margin-bottom: 10px;
+
+      &-btn {
+        margin-right: 7px;
+      }
+
+      &-label {
+        margin-right: 5px;
+        font-weight: 700;
+      }
+
+      &-info {
+        font-size: 10px;
+        color: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+      }
+    }
+
+    &__info {
+      color: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.01), 0 3px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      max-width: 200px;
+      font-size: 12px;
+    }
+
+    &__checkbox {
+      opacity: .7;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+
+      @media screen and (max-width: 480px) {
+        margin-bottom: 20px;
+      }
+
+      &-btn {
+        margin-right: 5px;
+      }
+
+      &-label {
+        opacity: .7;
+        font-size: 14px;
+
+        &__link {
+          color: $light-blue;
+        }
+      }
+    }
+
+    &__submit {
+      border: none;
+      color: white;
+      border-radius: 5px;
+      background-color: $light-blue;
+      width: 250px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
