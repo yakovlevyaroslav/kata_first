@@ -1,7 +1,7 @@
-@import url("/assets/fonts/brlw_bold/stylesheet.css");
-@import url("/assets/fonts/brlw_medium/stylesheet.css");
-@import url("/assets/fonts/brlw_regular/stylesheet.css");
-@import url("/assets/fonts/brlw_light/stylesheet.css");
+@import url("./assets/fonts/brlw_bold/stylesheet.css");
+@import url("./assets/fonts/brlw_medium/stylesheet.css");
+@import url("./assets/fonts/brlw_regular/stylesheet.css");
+@import url("./assets/fonts/brlw_light/stylesheet.css");
 * {
   transition: all ease-in 0.2s;
 }
@@ -38,7 +38,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/assets/images/bg.jpg");
+  background-image: url("./assets/images/bg.jpg");
   width: 50%;
   height: 1000px;
   position: relative;
@@ -54,7 +54,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("/assets/icons/logo.svg");
+  background-image: url("./assets/icons/logo.svg");
   position: absolute;
   width: 150px;
   height: 40px;
@@ -123,7 +123,7 @@ body {
 }
 .form-block__socials__btn--fb {
   background-size: 20px;
-  background-image: url("/assets/icons/facebook.svg");
+  background-image: url("./assets/icons/facebook.svg");
   background-color: #255A9B;
   margin-right: 20px;
 }
@@ -135,7 +135,7 @@ body {
 }
 .form-block__socials__btn--in {
   background-size: 20px;
-  background-image: url("/assets/icons/linkedin.svg");
+  background-image: url("./assets/icons/linkedin.svg");
   background-color: #0076B6;
 }
 @media screen and (max-width: 480px) {
