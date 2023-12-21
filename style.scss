@@ -9,10 +9,10 @@ $red-gray: #AFAFAF;
 $gray: #EEEEEE;
 $red: #AFAFAF;
 
-@import url('/assets/fonts/brlw_bold/stylesheet.css');
-@import url('/assets/fonts/brlw_medium/stylesheet.css');
-@import url('/assets/fonts/brlw_regular/stylesheet.css');
-@import url('/assets/fonts/brlw_light/stylesheet.css');
+@import url('./assets/fonts/brlw_bold/stylesheet.css');
+@import url('./assets/fonts/brlw_medium/stylesheet.css');
+@import url('./assets/fonts/brlw_regular/stylesheet.css');
+@import url('./assets/fonts/brlw_light/stylesheet.css');
 
 @mixin bg-standart {
   background-position: center;
@@ -62,7 +62,7 @@ body {
 
 .logo-block {
   @include bg-cover();
-  background-image: url('/assets/images/bg.jpg');
+  background-image: url('./assets/images/bg.jpg');
 
   width: 50%;
   height: 1000px;
@@ -76,7 +76,7 @@ body {
 
   &-icon {
     @include bg-contain();
-    background-image: url('/assets/icons/logo.svg');
+    background-image: url('./assets/icons/logo.svg');
     position: absolute;
     width: 150px;
     height: 40px;
@@ -143,7 +143,7 @@ body {
 
       &--fb {
         background-size: 20px;
-        background-image: url('/assets/icons/facebook.svg');
+        background-image: url('./assets/icons/facebook.svg');
         background-color: $fb;
         margin-right: 20px;
 
@@ -155,7 +155,7 @@ body {
 
       &--in {
         background-size: 20px;
-        background-image: url('/assets/icons/linkedin.svg');
+        background-image: url('./assets/icons/linkedin.svg');
         background-color: $in;
 
         @media screen and (max-width: 480px) {
